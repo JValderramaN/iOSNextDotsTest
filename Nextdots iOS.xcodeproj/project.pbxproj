@@ -9,10 +9,19 @@
 /* Begin PBXBuildFile section */
 		563FADE54FC0BE121B25A275 /* Pods_Nextdots_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1211CBDCBF50F17D135AF428 /* Pods_Nextdots_iOS.framework */; };
 		AB00D5DF1DF4A9C600AC274F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB00D5DE1DF4A9C600AC274F /* AppDelegate.swift */; };
-		AB00D5E11DF4A9C600AC274F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB00D5E01DF4A9C600AC274F /* ViewController.swift */; };
-		AB00D5E41DF4A9C600AC274F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB00D5E21DF4A9C600AC274F /* Main.storyboard */; };
+		AB00D5E11DF4A9C600AC274F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB00D5E01DF4A9C600AC274F /* LoginViewController.swift */; };
 		AB00D5E61DF4A9C600AC274F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB00D5E51DF4A9C600AC274F /* Assets.xcassets */; };
-		AB00D5E91DF4A9C600AC274F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB00D5E71DF4A9C600AC274F /* LaunchScreen.storyboard */; };
+		AB61D6091DF4D1B700A657B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB61D6081DF4D1B700A657B7 /* Main.storyboard */; };
+		AB61D60B1DF4D1CD00A657B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB61D60A1DF4D1CD00A657B7 /* LaunchScreen.storyboard */; };
+		AB61D6121DF4E15A00A657B7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB61D6111DF4E15A00A657B7 /* User.swift */; };
+		AB61D6141DF4EAFD00A657B7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB61D6131DF4EAFD00A657B7 /* ProfileViewController.swift */; };
+		AB61D6161DF4F71700A657B7 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB61D6151DF4F71700A657B7 /* FavoritesViewController.swift */; };
+		AB61D6181DF5008600A657B7 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB61D6171DF5008600A657B7 /* MainTabBarController.swift */; };
+		AB61D61A1DF52C6600A657B7 /* File in Resources */ = {isa = PBXBuildFile; fileRef = AB61D6191DF52C6600A657B7 /* File */; };
+		AB61D61C1DF52C8100A657B7 /* File in Resources */ = {isa = PBXBuildFile; fileRef = AB61D61B1DF52C8100A657B7 /* File */; };
+		AB61D61E1DF52C9200A657B7 /* File in Resources */ = {isa = PBXBuildFile; fileRef = AB61D61D1DF52C9200A657B7 /* File */; };
+		AB61D6201DF52C9E00A657B7 /* File in Resources */ = {isa = PBXBuildFile; fileRef = AB61D61F1DF52C9E00A657B7 /* File */; };
+		AB61D6221DF52CA600A657B7 /* File in Resources */ = {isa = PBXBuildFile; fileRef = AB61D6211DF52CA600A657B7 /* File */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,11 +29,20 @@
 		3728D8718881A0D85F0F8811 /* Pods-Nextdots iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nextdots iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nextdots iOS/Pods-Nextdots iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		AB00D5DB1DF4A9C600AC274F /* Nextdots iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nextdots iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB00D5DE1DF4A9C600AC274F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AB00D5E01DF4A9C600AC274F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AB00D5E31DF4A9C600AC274F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AB00D5E01DF4A9C600AC274F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AB00D5E51DF4A9C600AC274F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AB00D5E81DF4A9C600AC274F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB00D5EA1DF4A9C600AC274F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB61D6081DF4D1B700A657B7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		AB61D60A1DF4D1CD00A657B7 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AB61D6111DF4E15A00A657B7 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		AB61D6131DF4EAFD00A657B7 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		AB61D6151DF4F71700A657B7 /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		AB61D6171DF5008600A657B7 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		AB61D6191DF52C6600A657B7 /* File */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
+		AB61D61B1DF52C8100A657B7 /* File */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
+		AB61D61D1DF52C9200A657B7 /* File */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
+		AB61D61F1DF52C9E00A657B7 /* File */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
+		AB61D6211DF52CA600A657B7 /* File */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
 		B0F9F476265276DE27AE0380 /* Pods-Nextdots iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nextdots iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nextdots iOS/Pods-Nextdots iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,14 +96,103 @@
 		AB00D5DD1DF4A9C600AC274F /* Nextdots iOS */ = {
 			isa = PBXGroup;
 			children = (
-				AB00D5DE1DF4A9C600AC274F /* AppDelegate.swift */,
-				AB00D5E01DF4A9C600AC274F /* ViewController.swift */,
-				AB00D5E21DF4A9C600AC274F /* Main.storyboard */,
+				AB61D5FE1DF4CDE900A657B7 /* View */,
+				AB61D5FF1DF4CE6500A657B7 /* Interator */,
+				AB61D6001DF4CE7D00A657B7 /* Presentator */,
+				AB61D6011DF4CE9200A657B7 /* Entity */,
+				AB61D6021DF4CEAC00A657B7 /* Router */,
+				AB61D6031DF4CEBA00A657B7 /* Data Manager */,
+				AB61D6041DF4CED700A657B7 /* Service */,
+				AB61D6051DF4CEE800A657B7 /* Other */,
 				AB00D5E51DF4A9C600AC274F /* Assets.xcassets */,
-				AB00D5E71DF4A9C600AC274F /* LaunchScreen.storyboard */,
 				AB00D5EA1DF4A9C600AC274F /* Info.plist */,
 			);
 			path = "Nextdots iOS";
+			sourceTree = "<group>";
+		};
+		AB61D5FE1DF4CDE900A657B7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AB61D6061DF4CF3500A657B7 /* Storyboard */,
+				AB61D6071DF4CF4700A657B7 /* Xib and Custom Views */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AB61D5FF1DF4CE6500A657B7 /* Interator */ = {
+			isa = PBXGroup;
+			children = (
+				AB61D61B1DF52C8100A657B7 /* File */,
+			);
+			path = Interator;
+			sourceTree = "<group>";
+		};
+		AB61D6001DF4CE7D00A657B7 /* Presentator */ = {
+			isa = PBXGroup;
+			children = (
+				AB00D5E01DF4A9C600AC274F /* LoginViewController.swift */,
+				AB61D6131DF4EAFD00A657B7 /* ProfileViewController.swift */,
+				AB61D6151DF4F71700A657B7 /* FavoritesViewController.swift */,
+				AB61D6171DF5008600A657B7 /* MainTabBarController.swift */,
+			);
+			path = Presentator;
+			sourceTree = "<group>";
+		};
+		AB61D6011DF4CE9200A657B7 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				AB61D6111DF4E15A00A657B7 /* User.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		AB61D6021DF4CEAC00A657B7 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				AB61D61D1DF52C9200A657B7 /* File */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		AB61D6031DF4CEBA00A657B7 /* Data Manager */ = {
+			isa = PBXGroup;
+			children = (
+				AB61D61F1DF52C9E00A657B7 /* File */,
+			);
+			path = "Data Manager";
+			sourceTree = "<group>";
+		};
+		AB61D6041DF4CED700A657B7 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				AB61D6211DF52CA600A657B7 /* File */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		AB61D6051DF4CEE800A657B7 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				AB00D5DE1DF4A9C600AC274F /* AppDelegate.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		AB61D6061DF4CF3500A657B7 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				AB61D6081DF4D1B700A657B7 /* Main.storyboard */,
+				AB61D60A1DF4D1CD00A657B7 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		AB61D6071DF4CF4700A657B7 /* Xib and Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				AB61D6191DF52C6600A657B7 /* File */,
+			);
+			path = "Xib and Custom Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,9 +257,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB00D5E91DF4A9C600AC274F /* LaunchScreen.storyboard in Resources */,
+				AB61D61A1DF52C6600A657B7 /* File in Resources */,
+				AB61D60B1DF4D1CD00A657B7 /* LaunchScreen.storyboard in Resources */,
+				AB61D6201DF52C9E00A657B7 /* File in Resources */,
+				AB61D61E1DF52C9200A657B7 /* File in Resources */,
+				AB61D6221DF52CA600A657B7 /* File in Resources */,
 				AB00D5E61DF4A9C600AC274F /* Assets.xcassets in Resources */,
-				AB00D5E41DF4A9C600AC274F /* Main.storyboard in Resources */,
+				AB61D6091DF4D1B700A657B7 /* Main.storyboard in Resources */,
+				AB61D61C1DF52C8100A657B7 /* File in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,31 +323,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB00D5E11DF4A9C600AC274F /* ViewController.swift in Sources */,
+				AB00D5E11DF4A9C600AC274F /* LoginViewController.swift in Sources */,
 				AB00D5DF1DF4A9C600AC274F /* AppDelegate.swift in Sources */,
+				AB61D6181DF5008600A657B7 /* MainTabBarController.swift in Sources */,
+				AB61D6141DF4EAFD00A657B7 /* ProfileViewController.swift in Sources */,
+				AB61D6161DF4F71700A657B7 /* FavoritesViewController.swift in Sources */,
+				AB61D6121DF4E15A00A657B7 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		AB00D5E21DF4A9C600AC274F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AB00D5E31DF4A9C600AC274F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		AB00D5E71DF4A9C600AC274F /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AB00D5E81DF4A9C600AC274F /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		AB00D5EB1DF4A9C600AC274F /* Debug */ = {
@@ -337,6 +434,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Nextdots iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.josevalderrama.Nextdots-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -350,6 +448,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Nextdots iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.josevalderrama.Nextdots-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -376,6 +475,7 @@
 				AB00D5EF1DF4A9C600AC274F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
