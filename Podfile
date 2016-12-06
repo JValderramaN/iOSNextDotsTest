@@ -8,7 +8,7 @@ target 'Nextdots iOS' do
   # Pods for Nextdots iOS
   pod 'RealmSwift'
   pod 'FacebookLogin'
-  pod 'Alamofire'
   pod 'Kingfisher'
   pod 'MBProgressHUD'
+  pod 'AlamofireObjectMapper'
 end
