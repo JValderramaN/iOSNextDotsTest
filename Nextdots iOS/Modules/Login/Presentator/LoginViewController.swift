@@ -9,7 +9,6 @@
 import UIKit
 import FacebookLogin
 import FacebookCore
-import SwiftSpinner
 import MBProgressHUD
 
 class LoginViewController: UIViewController {
@@ -38,13 +37,11 @@ class LoginViewController: UIViewController {
     
     func loadCurrentUser(){
         MBProgressHUD.showAdded(to: self.view, animated: true)
-//         SwiftSpinner.show("Retrieving Information")
         UserProfile.loadCurrent({ (FetchResult) in
             print("user", UserProfile.current?.fullName)
             
             if let _ = UserProfile.current {
                 MBProgressHUD.hide(for: self.view, animated: true)
-//                SwiftSpinner.hide()
                 self.performSegue(withIdentifier: self.goToHomeSegueIdentifier, sender: self)
             }
         })

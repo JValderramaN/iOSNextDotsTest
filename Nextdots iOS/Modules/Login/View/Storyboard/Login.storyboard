@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BPa-Ep-Q4B">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="ERh-CA-pLP">
+            <objects>
+                <viewController id="BPa-Ep-Q4B" customClass="LoginViewController" customModule="Nextdots_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CdN-UL-z7a"/>
+                        <viewControllerLayoutGuide type="bottom" id="DbU-QE-Cbk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tyi-0T-ZE0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbJ-SN-EdM">
+                                <state key="normal" title="Login with Facebook"/>
+                                <connections>
+                                    <action selector="loginWithFacebookButtonTapped:" destination="BPa-Ep-Q4B" eventType="touchUpInside" id="l7f-nT-Kk9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kbJ-SN-EdM" firstAttribute="centerX" secondItem="tyi-0T-ZE0" secondAttribute="centerX" id="9rs-me-3yi"/>
+                            <constraint firstItem="kbJ-SN-EdM" firstAttribute="centerY" secondItem="tyi-0T-ZE0" secondAttribute="centerY" id="W7J-hY-koi"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0m9-Z9-aNC" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1183" y="-131"/>
+        </scene>
+    </scenes>
+</document>

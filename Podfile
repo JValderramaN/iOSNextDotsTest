@@ -11,4 +11,5 @@ target 'Nextdots iOS' do
   pod 'Kingfisher'
   pod 'MBProgressHUD'
   pod 'AlamofireObjectMapper'
+  pod 'Cosmos'
 end
