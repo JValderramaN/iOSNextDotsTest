@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BPa-Ep-Q4B">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BPa-Ep-Q4B">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -31,10 +30,21 @@
                             <constraint firstItem="kbJ-SN-EdM" firstAttribute="centerY" secondItem="tyi-0T-ZE0" secondAttribute="centerY" id="W7J-hY-koi"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="S7V-qY-jba" kind="show" identifier="goToHome" id="rQL-gI-G2t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0m9-Z9-aNC" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1183" y="-131"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="wEV-Dj-Ni8">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="S7V-qY-jba" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aQ3-9w-GnK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-359" y="-132"/>
         </scene>
     </scenes>
 </document>

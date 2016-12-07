@@ -17,8 +17,8 @@ class PreviewsLodgingTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.rowHeight = UITableViewAutomaticDimension
-        self.tableView.estimatedRowHeight = 80
+//        self.tableView.rowHeight = UITableViewAutomaticDimension
+//        self.tableView.estimatedRowHeight = 165
 //        self.tableView.register(PrototypePreviewLodgingTableViewCell.self, forCellReuseIdentifier: IdentifierPrototypePreviewLodgingTableViewCell)
         
         self.tableView.register(UINib(nibName: String(describing: PrototypePreviewLodgingTableViewCell.self), bundle: nil), forCellReuseIdentifier: IdentifierPrototypePreviewLodgingTableViewCell)
@@ -49,6 +49,11 @@ class PreviewsLodgingTableViewController: UITableViewController {
         cell.setData(lodging: lodgings![indexPath.row])
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return ((lodgings?.count ?? 0 ) > 0) ? 0 : 230
+        return lodgings!.count > 0 ? 230 : 0
     }
 }
 
