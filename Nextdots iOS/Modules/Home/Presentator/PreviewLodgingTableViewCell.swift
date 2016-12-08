@@ -1,5 +1,5 @@
 //
-//  PrototypePreviewLodgingTableViewCell.swift
+//  PreviewLodgingTableViewCell.swift
 //  Nextdots iOS
 //
 //  Created by José Valderrama on 12/6/16.
@@ -10,17 +10,17 @@ import UIKit
 import Cosmos
 import Kingfisher
 
-let IdentifierPrototypePreviewLodgingTableViewCell = "PrototypePreviewLodgingTableViewCell"
-//"IdentifierPrototypePreviewLodgingTableViewCell"
+let kIdentifierPreviewLodgingTableViewCell = "PreviewLodgingTableViewCell"
+let kPreviewLodgingTableViewCellHeight = CGFloat(250)
 
-class PrototypePreviewLodgingTableViewCell: UITableViewCell {
+class PreviewLodgingTableViewCell: UITableViewCell {
 
     @IBOutlet weak var pictureImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var typeLabel: UILabel!
     @IBOutlet weak var starsView: CosmosView!
-    
-    let interator = InteratorPreviewLodgingTableViewCell()
+    var lodging : Lodging?    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -34,9 +34,11 @@ class PrototypePreviewLodgingTableViewCell: UITableViewCell {
     }
     
     func setData(lodging : Lodging){
-        nameLabel.text = lodging.name
-        priceLabel.text = "\(lodging.listingCurrency) \(lodging.nightlyPrice)"
-        starsView.rating = Double(lodging.starRating)
-        pictureImageView.kf.setImage(with: URL(string: lodging.pictureURL))
+        self.lodging = lodging
+        self.nameLabel.text = lodging.name
+        self.priceLabel.text = "\(lodging.listingCurrency) \(lodging.nightlyPrice)"
+        self.typeLabel.text = lodging.propertyType
+        self.starsView.rating = lodging.starRating
+        self.pictureImageView.kf.setImage(with: URL(string: lodging.pictureURL))
     }
 }

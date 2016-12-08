@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Y9E-YQ-nh5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Y9E-YQ-nh5">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -8,7 +8,7 @@
         <!--Home-->
         <scene sceneID="5Qv-Mk-YDQ">
             <objects>
-                <tableViewController id="684-dD-5so" customClass="PreviewsLodgingTableViewController" customModule="Nextdots_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="PreviewsLodgingTableViewController" id="684-dD-5so" customClass="PreviewsLodgingTableViewController" customModule="Nextdots_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" id="K81-zC-BUR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,10 +19,70 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Home" id="lr3-IQ-KSX"/>
+                    <connections>
+                        <segue destination="YQc-c1-ure" kind="show" identifier="goToLodgingDetail" id="Ngk-lY-5Zh"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aye-PS-TGc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2415.1999999999998" y="-146.17691154422789"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="TSh-up-Kk9">
+            <objects>
+                <tableViewController hidesBottomBarWhenPushed="YES" id="YQc-c1-ure" customClass="DetailLodgingTableViewController" customModule="Nextdots_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="72" sectionHeaderHeight="28" sectionFooterHeight="28" id="DHh-Fv-b05">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="YQc-c1-ure" id="1rc-CC-1he"/>
+                            <outlet property="delegate" destination="YQc-c1-ure" id="nF7-na-lhs"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Detail" id="LM3-cF-nLf">
+                        <barButtonItem key="rightBarButtonItem" title="Pictures" id="mrX-mU-2CL">
+                            <connections>
+                                <segue destination="1Pa-4o-IxC" kind="show" identifier="showLodgingPictures" id="JAd-U9-K4Q"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WTd-ep-PRE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3333.5999999999999" y="-146.17691154422789"/>
+        </scene>
+        <!--Pictures-->
+        <scene sceneID="4Pj-Ao-qzO">
+            <objects>
+                <collectionViewController hidesBottomBarWhenPushed="YES" id="1Pa-4o-IxC" customClass="LodgingPictuesCollectionViewController" customModule="Nextdots_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="x6P-p3-r9J">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oHK-oK-JGD">
+                            <size key="itemSize" width="90" height="90"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells/>
+                        <connections>
+                            <outlet property="dataSource" destination="1Pa-4o-IxC" id="PNX-uM-5YU"/>
+                            <outlet property="delegate" destination="1Pa-4o-IxC" id="ECo-0y-SJt"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Pictures" id="y3i-7W-9at">
+                        <barButtonItem key="rightBarButtonItem" title="Save Lodging" id="flv-wr-9hH">
+                            <connections>
+                                <action selector="saveLodgingButtonTapped:" destination="1Pa-4o-IxC" id="0jF-Rf-WAv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v8d-Ns-VAP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4241" y="-146"/>
         </scene>
         <!--Home-->
         <scene sceneID="CZb-1x-fl8">

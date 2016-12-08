@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ImD-PQ-JxW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ImD-PQ-JxW">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -36,7 +36,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QjN-1h-V4i" id="cO7-6K-jAe">
-                                            <frame key="frameInset" width="375" height="44"/>
+                                            <frame key="frameInset" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorites" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xzq-Q2-R7Z">
@@ -76,42 +76,20 @@
                         <outlet property="actionsTable" destination="g0k-3z-uIK" id="nn7-Qf-HAs"/>
                         <outlet property="nameLabel" destination="UWD-MB-tCI" id="1Lz-eD-UAH"/>
                         <outlet property="profileImage" destination="o3F-CF-yTA" id="y5w-6J-AHo"/>
-                        <segue destination="lBP-HY-d3o" kind="show" identifier="goToFavorites" id="1Sq-al-IAw">
-                            <nil key="action"/>
-                        </segue>
+                        <segue destination="IXh-M4-toQ" kind="show" identifier="goToFavorites" id="QRR-jF-tcP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tZa-gR-iWh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1612" y="-582.45877061469275"/>
         </scene>
-        <!--Favorites-->
-        <scene sceneID="9Qp-jv-XjG">
+        <!--Home-->
+        <scene sceneID="sMm-6h-IRF">
             <objects>
-                <viewController storyboardIdentifier="FavoritesViewController" hidesBottomBarWhenPushed="YES" id="lBP-HY-d3o" customClass="FavoritesViewController" customModule="Nextdots_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="xfM-fT-0tb"/>
-                        <viewControllerLayoutGuide type="bottom" id="he6-hQ-4hH"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="jr2-Zj-fbW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jct-G3-zbN">
-                                <state key="normal" title="Button"/>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="jct-G3-zbN" firstAttribute="centerY" secondItem="jr2-Zj-fbW" secondAttribute="centerY" id="SGh-w4-44B"/>
-                            <constraint firstItem="jct-G3-zbN" firstAttribute="centerX" secondItem="jr2-Zj-fbW" secondAttribute="centerX" id="owC-Zi-GrG"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Favorites" id="tR9-5a-LTZ"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BMt-tY-M6B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Home" id="IXh-M4-toQ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WHS-FX-fFu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2362" y="-583"/>
+            <point key="canvasLocation" x="2251" y="-584"/>
         </scene>
         <!--Profile-->
         <scene sceneID="23r-LR-ceo">

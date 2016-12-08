@@ -11,17 +11,20 @@ import RealmSwift
 
 class PreviewsLodgingTableViewController: UITableViewController {
     
+    let goToLodgingDetailSegueIdentifier = "goToLodgingDetail"
     let interator = InteratorPreviewsLodgingTableViewController()
     var lodgings : [Lodging]?
     
+    var lodgingSelected : Lodging?
+    
+    var isFavorites : Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.register(UINib(nibName: String(describing: PreviewLodgingTableViewCell.self), bundle: nil), forCellReuseIdentifier: kIdentifierPreviewLodgingTableViewCell)
         
-//        self.tableView.rowHeight = UITableViewAutomaticDimension
-//        self.tableView.estimatedRowHeight = 165
-//        self.tableView.register(PrototypePreviewLodgingTableViewCell.self, forCellReuseIdentifier: IdentifierPrototypePreviewLodgingTableViewCell)
-        
-        self.tableView.register(UINib(nibName: String(describing: PrototypePreviewLodgingTableViewCell.self), bundle: nil), forCellReuseIdentifier: IdentifierPrototypePreviewLodgingTableViewCell)
+        self.title = isFavorites ? "Favorites" : "Home"
+        self.hidesBottomBarWhenPushed = isFavorites
         
         interator.delegate = self
         interator.prepareData()
@@ -41,10 +44,9 @@ class PreviewsLodgingTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return lodgings?.count ?? 0
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: IdentifierPrototypePreviewLodgingTableViewCell, for: indexPath) as! PrototypePreviewLodgingTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: kIdentifierPreviewLodgingTableViewCell, for: indexPath) as! PreviewLodgingTableViewCell
 
         cell.setData(lodging: lodgings![indexPath.row])
 
@@ -52,8 +54,13 @@ class PreviewsLodgingTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return ((lodgings?.count ?? 0 ) > 0) ? 0 : 230
-        return lodgings!.count > 0 ? 230 : 0
+        return lodgings!.count > 0 ? kPreviewLodgingTableViewCellHeight : 0
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! PreviewLodgingTableViewCell
+        lodgingSelected = cell.lodging
+        self.performSegue(withIdentifier: self.goToLodgingDetailSegueIdentifier, sender: self)
     }
 }
 

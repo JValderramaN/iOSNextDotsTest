@@ -31,9 +31,12 @@ class ProfileViewController: UIViewController {
     func showUserInfo(){
         self.nameLabel.text = UserProfile.current?.fullName
         let url = UserProfile.current?.imageURLWith(.square, size: self.profileImage.bounds.size)
-        print("url", url)
         self.profileImage.layer.cornerRadius = self.profileImage.bounds.size.height / 2
         self.profileImage.kf.setImage(with: url)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("segue", segue.destination)
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
@@ -61,6 +64,9 @@ extension ProfileViewController : UITableViewDataSource {
 // MARK: - UITableViewDelegate
 extension ProfileViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: self.goToFavoritesSegueIdentifier, sender: self)
+//        self.performSegue(withIdentifier: self.goToFavoritesSegueIdentifier, sender: self)
+        let favoritesVC = UIStoryboard.init(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "PreviewsLodgingTableViewController") as! PreviewsLodgingTableViewController
+        favoritesVC.isFavorites = true
+        self.navigationController?.pushViewController(favoritesVC, animated: true)
     }
 }

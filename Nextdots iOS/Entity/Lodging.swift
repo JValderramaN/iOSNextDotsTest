@@ -27,9 +27,8 @@ class Lodging: Object {
     dynamic var beds: Int = 0
     dynamic var latitude: Float = 0.0
     dynamic var longitude: Float = 0.0
-    dynamic var starRating: Float = 0.0
+    dynamic var starRating: Double = 0.0
     dynamic var scrimColor: String = ""
-    dynamic var city: String = ""
     var picturesURL = List<PictureURL>()
     
     required convenience init?(map: Map) {
@@ -60,10 +59,10 @@ extension Lodging : Mappable {
         longitude <- map["listing.lng"]
         starRating <- map["listing.star_rating"]
         scrimColor <- map["listing.scrim_color"]
-        city <- map["listing.city"]
+        
         let pictureURLs = map["listing.picture_urls"].currentValue as! [String]
         for pictureURL in pictureURLs {
-            picturesURL.append(PictureURL(url: pictureURL.replacingOccurrences(of: "=large", with: "=small")))
+            picturesURL.append(PictureURL(url: pictureURL))//.replacingOccurrences(of: "=large", with: "=small")
         }
     }
 }

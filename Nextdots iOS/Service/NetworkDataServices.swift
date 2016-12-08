@@ -17,6 +17,7 @@ import SystemConfiguration
 class NetworkDataServices {
     
     static func fetchArrayData <T: Object> (url: String, authorization: String = "", type: T.Type, success:@escaping (_ result: [T]) -> Void, fail:@escaping (_ error:NSError)->Void)->Void where T:Mappable {
+        print("1aca")
         Alamofire.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: ["Authorization": authorization]).responseJSON { response in
             switch response.result {
             case .success:
@@ -25,7 +26,7 @@ class NetworkDataServices {
                         return
                 }
                 
-                print("aca")
+                print("2aca")
                 if let objects = Mapper<T>().mapArray(JSONObject: search_results){
                     success(Array(objects))
                 }
