@@ -40,6 +40,7 @@ class DetailLodgingTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: kIdentifierDetailLodgingTableViewCell, for: indexPath) as! DetailLodgingTableViewCell
         
         cell.setData(lodging: lodging)
+        print("5...")
         return cell
     }
     

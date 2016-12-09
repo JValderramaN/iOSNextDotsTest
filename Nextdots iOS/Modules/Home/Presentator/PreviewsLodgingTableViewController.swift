@@ -24,10 +24,15 @@ class PreviewsLodgingTableViewController: UITableViewController {
         self.tableView.register(UINib(nibName: String(describing: PreviewLodgingTableViewCell.self), bundle: nil), forCellReuseIdentifier: kIdentifierPreviewLodgingTableViewCell)
         
         self.title = isFavorites ? "Favorites" : "Home"
-        self.hidesBottomBarWhenPushed = isFavorites
+        self.tabBarController?.tabBar.isHidden = isFavorites
         
         interator.delegate = self
         interator.prepareData()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.tabBarController?.tabBar.isHidden = false
     }
 
     override func didReceiveMemoryWarning() {

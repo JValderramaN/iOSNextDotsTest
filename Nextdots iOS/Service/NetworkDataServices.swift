@@ -9,46 +9,14 @@
 
 import Foundation
 import Alamofire
-import ObjectMapper
-import AlamofireObjectMapper
-import RealmSwift
-import SystemConfiguration
 
 class NetworkDataServices {
     
-    static func fetchArrayData <T: Object> (url: String, authorization: String = "", type: T.Type, success:@escaping (_ result: [T]) -> Void, fail:@escaping (_ error:NSError)->Void)->Void where T:Mappable {
-        print("1aca")
+    static func fetchRemoteData(url: String, authorization: String = "", success:@escaping (_ response: Any) -> Void, fail:@escaping (_ error:NSError)->Void) {
         Alamofire.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: ["Authorization": authorization]).responseJSON { response in
             switch response.result {
             case .success:
-                guard let json = response.result.value as? [String: Any],
-                    let search_results = json["search_results"] as? [Any] else{
-                        return
-                }
-                
-                print("2aca")
-                if let objects = Mapper<T>().mapArray(JSONObject: search_results){
-                    success(Array(objects))
-                }
-            case .failure(let error):
-                fail(error as NSError)
-            }
-        }
-    }
-    
-    static func fetchData <T: Object> (url : String, authorization: String = "", type: T.Type, success:@escaping (_ result: T) -> Void, fail:@escaping (_ error:NSError)->Void)->Void where T:Mappable {
-        Alamofire.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: ["Authorization": authorization]).responseJSON { response in
-            
-            switch response.result {
-            case .success:
-                guard let json = response.result.value as? [String: Any]
-                    else{
-                        return
-                }
-                
-                if let alarms = Mapper<T>().map(JSON: json){
-                    success(alarms)
-                }
+                success(response.result.value)
             case .failure(let error):
                 fail(error as NSError)
             }

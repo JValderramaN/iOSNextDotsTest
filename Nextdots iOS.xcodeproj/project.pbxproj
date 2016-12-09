@@ -18,6 +18,8 @@
 		AB2A83301DF7A48800913E64 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB2A832F1DF7A48800913E64 /* Map.storyboard */; };
 		AB2A83321DF7ABB200913E64 /* PreviewLodgingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB2A83311DF7ABB200913E64 /* PreviewLodgingTableViewCell.xib */; };
 		AB2A83341DF7ABED00913E64 /* PreviewLodgingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2A83331DF7ABED00913E64 /* PreviewLodgingTableViewCell.swift */; };
+		AB4377681DFA50A500CAF57B /* LodgingMapPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4377671DFA50A500CAF57B /* LodgingMapPin.swift */; };
+		AB43776A1DFA8DB700CAF57B /* CALayerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4377691DFA8DB700CAF57B /* CALayerExtensions.swift */; };
 		AB61D6091DF4D1B700A657B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB61D6081DF4D1B700A657B7 /* Main.storyboard */; };
 		AB61D60B1DF4D1CD00A657B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB61D60A1DF4D1CD00A657B7 /* LaunchScreen.storyboard */; };
 		AB61D6141DF4EAFD00A657B7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB61D6131DF4EAFD00A657B7 /* ProfileViewController.swift */; };
@@ -69,6 +71,8 @@
 		AB2A832F1DF7A48800913E64 /* Map.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		AB2A83311DF7ABB200913E64 /* PreviewLodgingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreviewLodgingTableViewCell.xib; sourceTree = "<group>"; };
 		AB2A83331DF7ABED00913E64 /* PreviewLodgingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewLodgingTableViewCell.swift; sourceTree = "<group>"; };
+		AB4377671DFA50A500CAF57B /* LodgingMapPin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LodgingMapPin.swift; sourceTree = "<group>"; };
+		AB4377691DFA8DB700CAF57B /* CALayerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CALayerExtensions.swift; sourceTree = "<group>"; };
 		AB61D6081DF4D1B700A657B7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		AB61D60A1DF4D1CD00A657B7 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB61D6131DF4EAFD00A657B7 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -314,6 +318,7 @@
 		AB2A831D1DF7A29C00913E64 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				AB4377661DFA501F00CAF57B /* Entity */,
 				AB2A831E1DF7A2D400913E64 /* View */,
 				AB2A831F1DF7A2E100913E64 /* Interator */,
 				AB2A83221DF7A30B00913E64 /* Presentator */,
@@ -438,6 +443,14 @@
 			path = "Data Manager";
 			sourceTree = "<group>";
 		};
+		AB4377661DFA501F00CAF57B /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				AB4377671DFA50A500CAF57B /* LodgingMapPin.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		AB61D5FE1DF4CDE900A657B7 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -493,6 +506,7 @@
 			children = (
 				AB00D5DE1DF4A9C600AC274F /* AppDelegate.swift */,
 				ABD824151DF90C60003A8F38 /* UIColorExtensions.swift */,
+				AB4377691DFA8DB700CAF57B /* CALayerExtensions.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -680,6 +694,7 @@
 				AB00D5DF1DF4A9C600AC274F /* AppDelegate.swift in Sources */,
 				AB61D6181DF5008600A657B7 /* MainTabBarController.swift in Sources */,
 				ABF1DC8D1DF7BC4500DD9E2D /* InteratorPreviewsLodgingTableViewController.swift in Sources */,
+				AB43776A1DFA8DB700CAF57B /* CALayerExtensions.swift in Sources */,
 				AB2A83341DF7ABED00913E64 /* PreviewLodgingTableViewCell.swift in Sources */,
 				ABF1DC941DF7C36500DD9E2D /* LocalDataService.swift in Sources */,
 				ABD824161DF90C60003A8F38 /* UIColorExtensions.swift in Sources */,
@@ -691,6 +706,7 @@
 				AB2A82FF1DF7737400913E64 /* PictureURL.swift in Sources */,
 				ABD824121DF8FD2C003A8F38 /* DetailLodgingTableViewCell.swift in Sources */,
 				ABD8240A1DF8E641003A8F38 /* DetailLodgingTableViewController.swift in Sources */,
+				AB4377681DFA50A500CAF57B /* LodgingMapPin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -25,8 +25,8 @@ class Lodging: Object {
     dynamic var bathrooms: Int = 0
     dynamic var bedrooms: Int = 0
     dynamic var beds: Int = 0
-    dynamic var latitude: Float = 0.0
-    dynamic var longitude: Float = 0.0
+    dynamic var latitude: Double = 0.0
+    dynamic var longitude: Double = 0.0
     dynamic var starRating: Double = 0.0
     dynamic var scrimColor: String = ""
     var picturesURL = List<PictureURL>()
@@ -50,7 +50,6 @@ extension Lodging : Mappable {
         propertyType <- map["listing.property_type"]
         roomType <- map["listing.room_type"]
         publicAddress <- map["listing.public_address"]
-        shortDescription = "A nice description"
         guests <- map["pricing_quote.guests"]
         bathrooms <- map["listing.bathrooms"]
         bedrooms <- map["listing.bedrooms"]
@@ -62,7 +61,22 @@ extension Lodging : Mappable {
         
         let pictureURLs = map["listing.picture_urls"].currentValue as! [String]
         for pictureURL in pictureURLs {
-            picturesURL.append(PictureURL(url: pictureURL))//.replacingOccurrences(of: "=large", with: "=small")
+            picturesURL.append(PictureURL(url: pictureURL))
         }
+        
+//        print("1aca")
+        NetworkDataServices.fetchRemoteData(url: "https://api.airbnb.com/v2/listings/\(id)?client_id=3092nxybyb0otqw18e8nh5nty&_format=v1_legacy_for_p3", authorization: "", success:
+            {(response) in
+                guard let json = response as? [String: Any],
+                    let listing = json["listing"] as? [String: Any] else{
+                        return
+                }
+                
+                self.shortDescription = listing["description"] as! String
+                
+//                print("2aca")
+            }, fail:{ (error) in
+                print("error \(error)")
+        })
     }
 }

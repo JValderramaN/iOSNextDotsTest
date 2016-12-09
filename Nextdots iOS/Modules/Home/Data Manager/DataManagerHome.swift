@@ -7,6 +7,9 @@
 //
 
 import Foundation
+import ObjectMapper
+import AlamofireObjectMapper
+import RealmSwift
 
 class DataManagerHome {
     
@@ -22,9 +25,16 @@ class DataManagerHome {
     }
     
     func fetchRemoteLodgings() {
-        NetworkDataServices.fetchArrayData(url: "https://api.airbnb.com/v2/search_results?client_id=3092nxybyb0otqw18e8nh5nty&_limit=30", authorization: "", type: Lodging.self, success:
-            {(objects) in
-                self.delegate?.responseDataManager(response: objects)
+        NetworkDataServices.fetchRemoteData(url: "https://api.airbnb.com/v2/search_results?client_id=3092nxybyb0otqw18e8nh5nty&_limit=30", authorization: "", success:
+            {(response) in
+                guard let json = response as? [String: Any],
+                    let search_results = json["search_results"] as? [Any] else{
+                        return
+                }
+                
+                if let objects = Mapper<Lodging>().mapArray(JSONObject: search_results){
+                    self.delegate?.responseDataManager(response: objects)
+                }
             }, fail:{ (error) in
                 print("error \(error)")
         })
