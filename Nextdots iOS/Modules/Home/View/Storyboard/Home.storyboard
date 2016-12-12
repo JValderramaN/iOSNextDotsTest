@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Y9E-YQ-nh5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Y9E-YQ-nh5">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -25,7 +25,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aye-PS-TGc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2179" y="-148"/>
+            <point key="canvasLocation" x="1674" y="-148"/>
         </scene>
         <!--Detail-->
         <scene sceneID="TSh-up-Kk9">
@@ -42,6 +42,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Detail" id="LM3-cF-nLf">
                         <barButtonItem key="rightBarButtonItem" title="Pictures" id="mrX-mU-2CL">
+                            <color key="tintColor" red="1" green="0.98431372549999996" blue="0.5568627451" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="1Pa-4o-IxC" kind="show" identifier="showLodgingPictures" id="JAd-U9-K4Q"/>
                             </connections>
@@ -50,7 +51,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WTd-ep-PRE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2704" y="-147"/>
+            <point key="canvasLocation" x="2286" y="-148"/>
         </scene>
         <!--Pictures-->
         <scene sceneID="4Pj-Ao-qzO">
@@ -74,6 +75,7 @@
                     </collectionView>
                     <navigationItem key="navigationItem" title="Pictures" id="y3i-7W-9at">
                         <barButtonItem key="rightBarButtonItem" title="Save Lodging" id="flv-wr-9hH">
+                            <color key="tintColor" red="1" green="0.98431372549999996" blue="0.5568627451" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="saveLodgingButtonTapped:" destination="1Pa-4o-IxC" id="0jF-Rf-WAv"/>
                             </connections>
@@ -82,7 +84,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v8d-Ns-VAP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3192" y="-147"/>
+            <point key="canvasLocation" x="2885" y="-149"/>
         </scene>
         <!--Home-->
         <scene sceneID="CZb-1x-fl8">
@@ -91,9 +93,13 @@
                     <tabBarItem key="tabBarItem" title="Home" image="home" id="GZT-ZB-NBj"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="v7f-z8-x22">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="v7f-z8-x22">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.25098039215686274" green="0.24705882352941178" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -102,7 +108,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7AY-tj-25V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1612" y="-146"/>
+            <point key="canvasLocation" x="1049" y="-147"/>
         </scene>
     </scenes>
     <resources>

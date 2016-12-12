@@ -29,7 +29,7 @@ class DataManagerHome {
     
     func fetchLocalLodgings() {
         let lodgings = LocalDataService.fetchData(Lodging.self)
-        self.delegate?.responseDataManager(response: lodgings)
+        self.delegate?.responseDataManager(response: lodgings.toArray(ofType: Lodging.self))
     }
     
     func fetchRemoteLodgings() {

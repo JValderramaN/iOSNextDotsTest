@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -12,7 +12,7 @@
             <rect key="frame" x="0.0" y="0.0" width="415" height="236"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FxW-Ie-1eT" id="kIb-2d-NqU">
-                <frame key="frameInset" width="415" height="235.5"/>
+                <frame key="frameInset" width="415" height="236"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ikP-Er-YNI"/>
@@ -39,10 +39,10 @@
                                 <integer key="value" value="5"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="number" keyPath="emptyBorderWidth">
-                                <real key="value" value="1"/>
+                                <real key="value" value="2"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="number" keyPath="filledBorderWidth">
-                                <real key="value" value="0.80000000000000004"/>
+                                <real key="value" value="0.59999999999999998"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="filledBorderColor">
                                 <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -65,12 +65,12 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="Dyy-mc-Ezg" secondAttribute="bottom" constant="5" id="0hy-Sl-4t3"/>
+                    <constraint firstAttribute="bottom" secondItem="Dyy-mc-Ezg" secondAttribute="bottom" constant="15" id="0hy-Sl-4t3"/>
                     <constraint firstItem="C7u-6T-shS" firstAttribute="top" secondItem="Jt3-1c-sO4" secondAttribute="bottom" constant="5" id="2Ns-Lg-nG3"/>
                     <constraint firstItem="ikP-Er-YNI" firstAttribute="top" secondItem="kIb-2d-NqU" secondAttribute="top" constant="2" id="BnF-JA-NKw"/>
                     <constraint firstItem="6VP-JB-g9c" firstAttribute="leading" secondItem="kIb-2d-NqU" secondAttribute="leading" constant="15" id="Hkq-eX-aUL"/>
                     <constraint firstAttribute="trailingMargin" secondItem="C7u-6T-shS" secondAttribute="trailing" constant="15" id="Is9-Ch-SeL"/>
-                    <constraint firstAttribute="trailing" secondItem="Dyy-mc-Ezg" secondAttribute="trailing" constant="5" id="SEV-Lw-q7q"/>
+                    <constraint firstAttribute="trailing" secondItem="Dyy-mc-Ezg" secondAttribute="trailing" constant="15" id="SEV-Lw-q7q"/>
                     <constraint firstItem="6VP-JB-g9c" firstAttribute="top" secondItem="C7u-6T-shS" secondAttribute="bottom" constant="5" id="WCB-bi-Cfc"/>
                     <constraint firstItem="ikP-Er-YNI" firstAttribute="leading" secondItem="kIb-2d-NqU" secondAttribute="leading" id="Xvv-1K-RDY"/>
                     <constraint firstAttribute="trailing" secondItem="Jt3-1c-sO4" secondAttribute="trailing" constant="15" id="YiI-zi-VC9"/>
@@ -79,7 +79,7 @@
                     <constraint firstItem="Dyy-mc-Ezg" firstAttribute="leading" secondItem="6VP-JB-g9c" secondAttribute="trailing" constant="10" id="kQB-mb-cCZ"/>
                     <constraint firstAttribute="trailing" secondItem="ikP-Er-YNI" secondAttribute="trailing" id="lti-4G-bFW"/>
                     <constraint firstAttribute="bottom" secondItem="ikP-Er-YNI" secondAttribute="bottom" constant="2" id="qE1-Ig-CT8"/>
-                    <constraint firstAttribute="bottom" secondItem="6VP-JB-g9c" secondAttribute="bottom" constant="5" id="tQZ-i5-mhO"/>
+                    <constraint firstAttribute="bottom" secondItem="6VP-JB-g9c" secondAttribute="bottom" constant="15" id="tQZ-i5-mhO"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

@@ -19,7 +19,15 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
     @IBAction func loginWithFacebookButtonTapped(_ sender: UIButton) {
+        if !Location.singleton.isAuthorizationGranted(){
+            return
+        }
+        
         let loginManager = LoginManager()
         loginManager.logIn([ .publicProfile ], viewController: self) { loginResult in
             switch loginResult {
