@@ -27,7 +27,7 @@ class PreviewsLodgingTableViewController: UITableViewController {
         self.tabBarController?.tabBar.isHidden = isFavorites
         
         interator.delegate = self
-        interator.prepareData()
+        interator.prepareData(favorites : isFavorites)
     }
     
     override func viewWillDisappear(_ animated: Bool) {

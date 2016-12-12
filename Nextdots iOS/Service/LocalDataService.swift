@@ -12,15 +12,15 @@ import RealmSwift
 class LocalDataService {
     static let realm = try! Realm()
     
-    static func saveData<T>(_ data: T) {
+    static func saveData<T>(_ data: T, complation:@escaping (_ error:NSError?)->Void) {
         do {
             try realm.write {
-                if let user = data as? Lodging{
-                    realm.add(user, update: true)
-                }
+                realm.add(data as! Object, update: true)
+                complation(nil)
             }
         } catch let error as NSError {
             print(error)
+            complation(error)
         }
     }
     

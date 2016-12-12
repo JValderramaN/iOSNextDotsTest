@@ -27,9 +27,7 @@ class LoginViewController: UIViewController {
                 print(error)
             case .cancelled:
                 print("User cancelled login.")
-            case .success(let grantedPermissions, let declinedPermissions, let accessToken):
-                print("Logged in!", grantedPermissions, declinedPermissions, accessToken)
-               
+            case .success:
                 self.loadCurrentUser()
             }
         }

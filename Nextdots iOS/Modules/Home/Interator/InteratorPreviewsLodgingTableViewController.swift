@@ -15,9 +15,9 @@ class InteratorPreviewsLodgingTableViewController : DataManagerDelegate {
     var delegate: InteratorPreviewsLodgingTableViewControllerDelegate?
     let dataManager = DataManagerHome()
     
-    func prepareData() {
+    func prepareData(favorites : Bool) {
         dataManager.delegate = self
-        dataManager.fetchLodgings()
+        dataManager.fetchLodgings(favorites: favorites)
     }
     
     func responseDataManager <T>(response: T) {

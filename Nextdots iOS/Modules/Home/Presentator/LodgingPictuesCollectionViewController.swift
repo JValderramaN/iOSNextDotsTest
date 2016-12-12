@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import MBProgressHUD
 
 class LodgingPictuesCollectionViewController: UICollectionViewController {
 
@@ -26,7 +27,10 @@ class LodgingPictuesCollectionViewController: UICollectionViewController {
     }
     
     @IBAction func saveLodgingButtonTapped(_ sender: UIBarButtonItem) {
-        print("saved")
+        MBProgressHUD.showAdded(to: self.view, animated: true)
+        LocalDataService.saveData(lodging) { (error) in
+            MBProgressHUD.hide(for: self.view, animated: true)
+        }
     }
     
     // MARK: UICollectionViewDataSource

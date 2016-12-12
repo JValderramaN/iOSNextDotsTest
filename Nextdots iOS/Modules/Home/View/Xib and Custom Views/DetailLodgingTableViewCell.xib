@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -100,7 +100,7 @@
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
-                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="qVZ-Yw-1ED">
+                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="qVZ-Yw-1ED" customClass="CustomMapView" customModule="Nextdots_iOS" customModuleProvider="target">
                         <constraints>
                             <constraint firstAttribute="width" secondItem="qVZ-Yw-1ED" secondAttribute="height" multiplier="1:1" id="XmN-uS-zWc"/>
                         </constraints>
@@ -108,7 +108,7 @@
                             <outlet property="delegate" destination="Frw-NH-1sB" id="BFA-zg-c7q"/>
                         </connections>
                     </mapView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="public address" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ClA-gR-JdO">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" text="public address" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ClA-gR-JdO">
                         <constraints>
                             <constraint firstAttribute="height" constant="45" id="4eF-8S-fIy"/>
                         </constraints>
@@ -178,7 +178,6 @@
                     <constraint firstItem="G28-ei-HW7" firstAttribute="leading" secondItem="8fr-GX-qlt" secondAttribute="leading" id="GoN-ry-WsB"/>
                     <constraint firstItem="8fr-GX-qlt" firstAttribute="trailing" secondItem="1NN-ed-Bjh" secondAttribute="trailing" id="IZy-SU-YNb"/>
                     <constraint firstItem="nk3-VF-we8" firstAttribute="top" secondItem="HpE-NX-tBE" secondAttribute="bottom" constant="-35" id="InS-r3-MB0"/>
-                    <constraint firstItem="ClA-gR-JdO" firstAttribute="top" secondItem="5Ry-ve-Mv5" secondAttribute="bottom" constant="25" id="MCZ-7u-weR"/>
                     <constraint firstItem="HpE-NX-tBE" firstAttribute="width" secondItem="HpE-NX-tBE" secondAttribute="height" multiplier="75:44" id="PlA-k1-xJb"/>
                     <constraint firstItem="5Ry-ve-Mv5" firstAttribute="top" secondItem="G28-ei-HW7" secondAttribute="bottom" constant="15" id="QMe-BO-Os8"/>
                     <constraint firstItem="viG-Pi-9ps" firstAttribute="leading" secondItem="8Ga-3T-gZe" secondAttribute="leadingMargin" constant="15" id="UPw-RO-Poj"/>
@@ -199,12 +198,14 @@
                     <constraint firstItem="1NN-ed-Bjh" firstAttribute="leading" secondItem="viG-Pi-9ps" secondAttribute="leading" id="dzC-xF-RsP"/>
                     <constraint firstItem="7OF-ui-YR9" firstAttribute="top" secondItem="IHZ-kT-NPE" secondAttribute="top" id="fhJ-vE-BFb"/>
                     <constraint firstItem="HpE-NX-tBE" firstAttribute="leading" secondItem="8Ga-3T-gZe" secondAttribute="leading" id="iDR-9t-4bo"/>
+                    <constraint firstAttribute="bottom" secondItem="qVZ-Yw-1ED" secondAttribute="bottom" priority="250" constant="10" id="k61-CY-qdh"/>
                     <constraint firstItem="Uy4-qp-73H" firstAttribute="trailing" secondItem="HpE-NX-tBE" secondAttribute="trailing" constant="-5" id="kTY-mB-igN"/>
                     <constraint firstItem="rt8-W9-MfB" firstAttribute="leading" secondItem="sek-2Q-rfA" secondAttribute="trailing" constant="15" id="ngV-ch-eJi"/>
                     <constraint firstAttribute="trailing" secondItem="HpE-NX-tBE" secondAttribute="trailing" id="nm5-p5-bP7"/>
                     <constraint firstItem="G28-ei-HW7" firstAttribute="top" secondItem="5iT-6W-rak" secondAttribute="bottom" constant="26" id="oSL-UW-mkU"/>
                     <constraint firstItem="ClA-gR-JdO" firstAttribute="leading" secondItem="G28-ei-HW7" secondAttribute="leading" id="ox6-Zi-pRx"/>
                     <constraint firstItem="8fr-GX-qlt" firstAttribute="top" secondItem="1NN-ed-Bjh" secondAttribute="bottom" constant="10" id="oxZ-nt-su0"/>
+                    <constraint firstItem="ClA-gR-JdO" firstAttribute="top" secondItem="5Ry-ve-Mv5" secondAttribute="bottom" constant="53" id="pxL-Hx-Duc"/>
                     <constraint firstItem="hvk-Ki-rAC" firstAttribute="centerX" secondItem="IHZ-kT-NPE" secondAttribute="centerX" id="sYS-6b-BjF"/>
                     <constraint firstItem="qVZ-Yw-1ED" firstAttribute="leading" secondItem="8Ga-3T-gZe" secondAttribute="leading" constant="10" id="spH-db-Yqk"/>
                     <constraint firstItem="rt8-W9-MfB" firstAttribute="top" secondItem="8fr-GX-qlt" secondAttribute="bottom" constant="20" id="tD4-Ls-N0q"/>
