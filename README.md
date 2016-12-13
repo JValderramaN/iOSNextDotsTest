@@ -10,15 +10,15 @@ https://github.com/futurice/ios-good-practices#architecture
 - Using Realm.io for Swift:
 https://realm.io/communities/swift/
 
-- Using Cocoapods and 'pods':
-https://cocoapods.org/
-- - Login
-https://cocoapods.org/pods/FacebookLogin
-- - Image Cache
-https://cocoapods.org/pods/Kingfisher
-- - Progress Indicator
-https://cocoapods.org/pods/MBProgressHUD
-- - Networking Library and Wrapper
-https://cocoapods.org/pods/AlamofireObjectMapper
-- - Star Rating Control
-https://cocoapods.org/pods/Cosmos
+- Using Cocoapods and 'pods': <br/>
+https://cocoapods.org/ <br />
+* Login <br />
+https://cocoapods.org/pods/FacebookLogin <br />
+* Image Cache <br />
+https://cocoapods.org/pods/Kingfisher <br />
+* Progress Indicator <br />
+https://cocoapods.org/pods/MBProgressHUD <br />
+* Networking Library and Wrapper <br />
+https://cocoapods.org/pods/AlamofireObjectMapper <br />
+* Star Rating Control <br />
+https://cocoapods.org/pods/Cosmos <br />
