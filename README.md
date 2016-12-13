@@ -12,13 +12,13 @@ https://realm.io/communities/swift/
 
 - Using Cocoapods and 'pods':
 https://cocoapods.org/
--- Login
+- - Login
 https://cocoapods.org/pods/FacebookLogin
--- Image Cache
+- - Image Cache
 https://cocoapods.org/pods/Kingfisher
--- Progress Indicator
+- - Progress Indicator
 https://cocoapods.org/pods/MBProgressHUD
--- Networking Library and Wrapper
+- - Networking Library and Wrapper
 https://cocoapods.org/pods/AlamofireObjectMapper
--- Star Rating Control
+- - Star Rating Control
 https://cocoapods.org/pods/Cosmos
