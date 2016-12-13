@@ -51,9 +51,7 @@ class LoginViewController: UIViewController {
     
     func loadCurrentUser(){
         MBProgressHUD.showAdded(to: self.view, animated: true)
-        UserProfile.loadCurrent({ (FetchResult) in
-            print("user", UserProfile.current?.fullName)
-            
+        UserProfile.loadCurrent({ (FetchResult) in            
             if let _ = UserProfile.current {
                 MBProgressHUD.hide(for: self.view, animated: true)
                 self.performSegue(withIdentifier: self.goToHomeSegueIdentifier, sender: self)

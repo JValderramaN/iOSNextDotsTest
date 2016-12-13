@@ -20,6 +20,7 @@
 		AB28FD131DFF8B0700A4A282 /* RouterLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB28FD121DFF8B0700A4A282 /* RouterLogin.swift */; };
 		AB28FD171DFFA7C100A4A282 /* InteratorLodgingPictuesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB28FD161DFFA7C100A4A282 /* InteratorLodgingPictuesCollectionViewController.swift */; };
 		AB28FD191DFFABCF00A4A282 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB28FD181DFFABCF00A4A282 /* UIViewControllerExtensions.swift */; };
+		AB28FD1C1E00520100A4A282 /* InteratorProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB28FD1B1E00520100A4A282 /* InteratorProfileViewController.swift */; };
 		AB2A82FF1DF7737400913E64 /* PictureURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2A82FE1DF7737400913E64 /* PictureURL.swift */; };
 		AB2A83051DF783BF00913E64 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2A83041DF783BF00913E64 /* DataManager.swift */; };
 		AB2A83131DF7874D00913E64 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB2A83121DF7874D00913E64 /* Login.storyboard */; };
@@ -68,6 +69,7 @@
 		AB28FD121DFF8B0700A4A282 /* RouterLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterLogin.swift; sourceTree = "<group>"; };
 		AB28FD161DFFA7C100A4A282 /* InteratorLodgingPictuesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteratorLodgingPictuesCollectionViewController.swift; sourceTree = "<group>"; };
 		AB28FD181DFFABCF00A4A282 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		AB28FD1B1E00520100A4A282 /* InteratorProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteratorProfileViewController.swift; sourceTree = "<group>"; };
 		AB2A82FE1DF7737400913E64 /* PictureURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureURL.swift; sourceTree = "<group>"; };
 		AB2A83041DF783BF00913E64 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		AB2A83121DF7874D00913E64 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -174,6 +176,14 @@
 			path = Interator;
 			sourceTree = "<group>";
 		};
+		AB28FD1A1E0051AF00A4A282 /* Interator */ = {
+			isa = PBXGroup;
+			children = (
+				AB28FD1B1E00520100A4A282 /* InteratorProfileViewController.swift */,
+			);
+			path = Interator;
+			sourceTree = "<group>";
+		};
 		AB2A83061DF7840800913E64 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				AB2A83151DF7880200913E64 /* View */,
+				AB28FD1A1E0051AF00A4A282 /* Interator */,
 				AB2A83171DF7882400913E64 /* Presentator */,
 				AB2A83181DF7884000913E64 /* Router */,
 			);
@@ -615,6 +626,7 @@
 				AB14F9E61DFE5FB600E8B740 /* LodgingCallOutButton.swift in Sources */,
 				ABD8241C1DF91447003A8F38 /* LodgingPicureCollectionViewCell.swift in Sources */,
 				AB61D6141DF4EAFD00A657B7 /* ProfileViewController.swift in Sources */,
+				AB28FD1C1E00520100A4A282 /* InteratorProfileViewController.swift in Sources */,
 				ABF1DC8F1DF7C05100DD9E2D /* DataManagerHome.swift in Sources */,
 				ABD8B45E1DF7257200EDC397 /* Lodging.swift in Sources */,
 				ABF1DC8B1DF7BBBD00DD9E2D /* PreviewsLodgingTableViewController.swift in Sources */,

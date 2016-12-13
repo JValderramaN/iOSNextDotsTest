@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import FacebookLogin
-import FacebookCore
 
 extension ProfileViewController{
     
@@ -27,9 +25,7 @@ extension ProfileViewController{
         return identifier == self.goToFavoritesSegueIdentifier
     }
     
-    func logout(){
-        let loginManager = LoginManager()
-        loginManager.logOut()
+    func goToLogin(){
         let loginVC = UIStoryboard.init(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController")
         self.present(loginVC, animated: true, completion: nil)
     }

@@ -29,6 +29,7 @@ class Lodging: Object {
     dynamic var longitude: Double = 0.0
     dynamic var starRating: Double = 0.0
     dynamic var scrimColor: String = ""
+    dynamic var isFavorite: Bool = false
     var picturesURL = List<PictureURL>()
     
     required convenience init?(map: Map) {

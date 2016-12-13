@@ -30,7 +30,6 @@ class Location : NSObject{
     func getAddress(completion: @escaping (Typealiases.JSONDict?) -> ()) {
         if let currentLocation = locationManager.location, isAuthorizationGranted(){
             self.currentLocation = currentLocation
-//            print("getAddress \(currentLocation)")
             geoCoder.reverseGeocodeLocation(currentLocation) { (placemarks, error) -> Void in
                 
                 if error != nil {

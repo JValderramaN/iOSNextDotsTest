@@ -39,7 +39,6 @@ class ProfileViewController: UIViewController {
         let url = UserProfile.current?.imageURLWith(.square, size: self.profileImage.bounds.size)
         self.profileImage.layer.borderWidth = 2
         self.profileImage.layer.borderColor = UIColor.lightGray.cgColor
-//            UIColor(red: 145/255, green: 142/255, blue: 92/255, alpha: 1).cgColor
         self.profileImage.layer.cornerRadius = self.profileImage.bounds.size.height / 2
         self.profileImage.kf.setImage(with: url)
     }

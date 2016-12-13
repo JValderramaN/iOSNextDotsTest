@@ -106,13 +106,13 @@
             </objects>
             <point key="canvasLocation" x="1612" y="-582.45877061469275"/>
         </scene>
-        <!--Home-->
+        <!--PreviewsLodgingTableViewController-->
         <scene sceneID="sMm-6h-IRF">
             <objects>
-                <viewControllerPlaceholder storyboardName="Home" id="IXh-M4-toQ" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Home" referencedIdentifier="PreviewsLodgingTableViewController" id="IXh-M4-toQ" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WHS-FX-fFu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2250" y="-632"/>
+            <point key="canvasLocation" x="2355" y="-584"/>
         </scene>
         <!--Profile-->
         <scene sceneID="23r-LR-ceo">

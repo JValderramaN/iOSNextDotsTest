@@ -20,6 +20,8 @@ class LodgingPictuesCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
 
         self.collectionView?.register(UINib(nibName: String(describing: LodgingPicureCollectionViewCell.self), bundle: nil), forCellWithReuseIdentifier: kIdentifierLodgingPicureCollectionViewCell)
+        
+        self.navigationItem.rightBarButtonItem?.isEnabled = !lodging.isFavorite
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,6 +31,7 @@ class LodgingPictuesCollectionViewController: UICollectionViewController {
     
     @IBAction func saveLodgingButtonTapped(_ sender: UIBarButtonItem) {
         MBProgressHUD.showAdded(to: self.view, animated: true)
+        lodging.isFavorite = true
         LocalDataService.saveData(lodging) { (error) in
             self.startMonitoringLodging(lodging: self.lodging)
             MBProgressHUD.hide(for: self.view, animated: true)
