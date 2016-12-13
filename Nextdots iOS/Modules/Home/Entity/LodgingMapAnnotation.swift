@@ -10,12 +10,13 @@ import MapKit
 
 class LodgingMapAnnotation: NSObject, MKAnnotation {
     let coordinate: CLLocationCoordinate2D
+    
     var title: String? {
         get {
             return "\(self.lodging.listingCurrency) \(self.lodging.nightlyPrice)"
         }
     }
-    
+
     var canShowDetail : Bool
     var lodging : Lodging
     

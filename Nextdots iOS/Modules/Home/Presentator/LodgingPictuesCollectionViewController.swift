@@ -9,6 +9,7 @@
 import UIKit
 import RealmSwift
 import MBProgressHUD
+import CoreLocation
 
 class LodgingPictuesCollectionViewController: UICollectionViewController {
 
@@ -29,8 +30,19 @@ class LodgingPictuesCollectionViewController: UICollectionViewController {
     @IBAction func saveLodgingButtonTapped(_ sender: UIBarButtonItem) {
         MBProgressHUD.showAdded(to: self.view, animated: true)
         LocalDataService.saveData(lodging) { (error) in
+            self.startMonitoringLodging(lodging: self.lodging)
             MBProgressHUD.hide(for: self.view, animated: true)
         }
+    }
+    
+    func startMonitoringLodging(lodging : Lodging){
+        if !CLLocationManager.isMonitoringAvailable(for: CLCircularRegion.self) {
+            return
+        }
+
+        let coordinate = CLLocationCoordinate2D(latitude: lodging.latitude, longitude: lodging.longitude)
+        let region = CLCircularRegion(center: coordinate, radius: 400, identifier: "\(lodging.id)")
+        Location.singleton.locationManager.startMonitoring(for: region)
     }
     
     // MARK: UICollectionViewDataSource

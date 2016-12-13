@@ -17,10 +17,16 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var actionsTable: UITableView!
     
     let identifierFavoritesCell = "FavoritesCell"
+    let identifierLogoutCell = "LogoutCell"
     let goToFavoritesSegueIdentifier = "goToFavorites"
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.isHidden = false
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -31,16 +37,11 @@ class ProfileViewController: UIViewController {
     func showUserInfo(){
         self.nameLabel.text = UserProfile.current?.fullName
         let url = UserProfile.current?.imageURLWith(.square, size: self.profileImage.bounds.size)
+        self.profileImage.layer.borderWidth = 2
+        self.profileImage.layer.borderColor = UIColor.lightGray.cgColor
+//            UIColor(red: 145/255, green: 142/255, blue: 92/255, alpha: 1).cgColor
         self.profileImage.layer.cornerRadius = self.profileImage.bounds.size.height / 2
         self.profileImage.kf.setImage(with: url)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("segue", segue.destination)
-    }
-    
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        return identifier == self.goToFavoritesSegueIdentifier
     }
 }
 
@@ -52,21 +53,27 @@ extension ProfileViewController : UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return tableView.dequeueReusableCell(withIdentifier: identifierFavoritesCell)!
+        switch indexPath.row {
+        case 0:
+            return tableView.dequeueReusableCell(withIdentifier: identifierFavoritesCell)!
+        default:
+            return tableView.dequeueReusableCell(withIdentifier: identifierLogoutCell)!
+        }
     }
-    
 }
 
 // MARK: - UITableViewDelegate
 extension ProfileViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        self.performSegue(withIdentifier: self.goToFavoritesSegueIdentifier, sender: self)
-        let favoritesVC = UIStoryboard.init(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "PreviewsLodgingTableViewController") as! PreviewsLodgingTableViewController
-        favoritesVC.isFavorites = true
-        self.navigationController?.pushViewController(favoritesVC, animated: true)
+        switch indexPath.row {
+        case 0:
+            self.performSegue(withIdentifier: self.goToFavoritesSegueIdentifier, sender: self)
+        default:
+            self.logout()
+        }
     }
 }

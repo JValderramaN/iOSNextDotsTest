@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BPa-Ep-Q4B">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BPa-Ep-Q4B">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Login View Controller-->
         <scene sceneID="ERh-CA-pLP">
             <objects>
-                <viewController id="BPa-Ep-Q4B" customClass="LoginViewController" customModule="Nextdots_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="BPa-Ep-Q4B" customClass="LoginViewController" customModule="Nextdots_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CdN-UL-z7a"/>
                         <viewControllerLayoutGuide type="bottom" id="DbU-QE-Cbk"/>
@@ -17,17 +18,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jgl-hz-lMJ">
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="SMB-Y6-cRd">
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="SMB-Y6-cRd" secondAttribute="height" multiplier="15:8" id="ruH-jG-Dvh"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbJ-SN-EdM">
-                                <state key="normal" title="Login with Facebook"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
+                                <size key="titleShadowOffset" width="0.0" height="1"/>
+                                <state key="normal" title="Login with Facebook">
+                                    <color key="titleShadowColor" red="0.56171350669999998" green="0.69081077690000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="loginWithFacebookButtonTapped:" destination="BPa-Ep-Q4B" eventType="touchUpInside" id="l7f-nT-Kk9"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NextDots Airbnb iOS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RsU-eA-WVf">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <color key="textColor" red="1" green="0.3529411764705882" blue="0.37254901960784315" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="DbU-QE-Cbk" firstAttribute="top" secondItem="Jgl-hz-lMJ" secondAttribute="bottom" constant="40" id="0cL-4F-25o"/>
+                            <constraint firstItem="SMB-Y6-cRd" firstAttribute="centerY" secondItem="tyi-0T-ZE0" secondAttribute="centerY" constant="-50" id="8nD-wv-j4z"/>
                             <constraint firstItem="kbJ-SN-EdM" firstAttribute="centerX" secondItem="tyi-0T-ZE0" secondAttribute="centerX" id="9rs-me-3yi"/>
-                            <constraint firstItem="kbJ-SN-EdM" firstAttribute="centerY" secondItem="tyi-0T-ZE0" secondAttribute="centerY" id="W7J-hY-koi"/>
+                            <constraint firstItem="SMB-Y6-cRd" firstAttribute="top" secondItem="RsU-eA-WVf" secondAttribute="bottom" constant="20" id="Ggm-XE-iJd"/>
+                            <constraint firstItem="SMB-Y6-cRd" firstAttribute="centerX" secondItem="tyi-0T-ZE0" secondAttribute="centerX" id="Q0m-X9-Bwm"/>
+                            <constraint firstItem="SMB-Y6-cRd" firstAttribute="width" secondItem="SMB-Y6-cRd" secondAttribute="height" multiplier="15:8" id="UNf-qa-qQn"/>
+                            <constraint firstItem="RsU-eA-WVf" firstAttribute="centerX" secondItem="SMB-Y6-cRd" secondAttribute="centerX" id="ctC-HP-AXk"/>
+                            <constraint firstItem="kbJ-SN-EdM" firstAttribute="top" secondItem="SMB-Y6-cRd" secondAttribute="bottom" constant="40" id="t2L-gg-K0d"/>
+                            <constraint firstItem="Jgl-hz-lMJ" firstAttribute="centerX" secondItem="tyi-0T-ZE0" secondAttribute="centerX" id="tzc-xx-rxU"/>
                         </constraints>
                     </view>
                     <connections>
@@ -44,7 +71,10 @@
                 <viewControllerPlaceholder storyboardName="Main" id="S7V-qY-jba" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aQ3-9w-GnK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-359" y="-132"/>
+            <point key="canvasLocation" x="-432" y="-127"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="133" height="133"/>
+    </resources>
 </document>

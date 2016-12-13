@@ -24,15 +24,14 @@ class PreviewsLodgingTableViewController: UITableViewController {
         self.tableView.register(UINib(nibName: String(describing: PreviewLodgingTableViewCell.self), bundle: nil), forCellReuseIdentifier: kIdentifierPreviewLodgingTableViewCell)
         
         self.title = isFavorites ? "Favorites" : "Home"
-        self.tabBarController?.tabBar.isHidden = isFavorites
         
         interator.delegate = self
         interator.prepareData(favorites : isFavorites)
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.tabBarController?.tabBar.isHidden = false
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.isHidden = isFavorites
     }
 
     override func didReceiveMemoryWarning() {

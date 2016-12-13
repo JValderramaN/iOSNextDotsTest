@@ -21,14 +21,22 @@ class LoginViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        if !Location.singleton.isAuthorizationGranted(){
+            Location.singleton.locationManager.requestAlwaysAuthorization()
+        }
     }
     
     @IBAction func loginWithFacebookButtonTapped(_ sender: UIButton) {
         if !Location.singleton.isAuthorizationGranted(){
+            let alertController = UIAlertController(title: "Advice", message: "In order to locate Lodgings, Device's Location must be granted. You can enable it on Settings > Privacy > Location Services", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alertController.addAction(defaultAction)
+            present(alertController, animated: true, completion: nil)
             return
         }
         
         let loginManager = LoginManager()
+        
         loginManager.logIn([ .publicProfile ], viewController: self) { loginResult in
             switch loginResult {
             case .failed(let error):
@@ -51,10 +59,6 @@ class LoginViewController: UIViewController {
                 self.performSegue(withIdentifier: self.goToHomeSegueIdentifier, sender: self)
             }
         })
-    }
-
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        return identifier == self.goToHomeSegueIdentifier
     }
 }
 

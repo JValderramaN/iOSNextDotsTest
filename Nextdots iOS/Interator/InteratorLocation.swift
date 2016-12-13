@@ -30,7 +30,7 @@ class Location : NSObject{
     func getAddress(completion: @escaping (Typealiases.JSONDict?) -> ()) {
         if let currentLocation = locationManager.location, isAuthorizationGranted(){
             self.currentLocation = currentLocation
-            print("getAddress \(currentLocation)")
+//            print("getAddress \(currentLocation)")
             geoCoder.reverseGeocodeLocation(currentLocation) { (placemarks, error) -> Void in
                 
                 if error != nil {
@@ -52,7 +52,6 @@ class Location : NSObject{
     }
     
     func isAuthorizationGranted() -> Bool{
-        locationManager.requestAlwaysAuthorization()
         locationManager.delegate = self
         if (CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedWhenInUse ||
             CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedAlways){

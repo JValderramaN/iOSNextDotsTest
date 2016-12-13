@@ -12,7 +12,7 @@ import Cosmos
 import Kingfisher
 
 let kIdentifierDetailLodgingTableViewCell = "DetailLodgingTableViewCell"
-let kDetailLodgingTableViewCellHeight = CGFloat(1130)
+let kDetailLodgingTableViewCellHeight = CGFloat(1160)
 
 class DetailLodgingTableViewCell: UITableViewCell {
 
@@ -52,8 +52,12 @@ class DetailLodgingTableViewCell: UITableViewCell {
         self.pictureImageView.kf.setImage(with: URL(string: lodging.pictureURL))
         self.priceLabel.text = "\(lodging.listingCurrency) \(lodging.nightlyPrice)"
         self.nameLabel.text = lodging.name
-        self.propertyTypeLabel.text = lodging.propertyType
-        self.roomTypeLabel.text = lodging.roomType
+//        self.propertyTypeLabel.text = lodging.propertyType
+//        self.roomTypeLabel.text = lodging.roomType
+        
+        self.propertyTypeLabel.text = "\(lodging.latitude)"
+        self.roomTypeLabel.text = "\(lodging.longitude)"
+        
         self.guestsLabel.text = "\(lodging.guests)"
         self.bedroomsLabel.text = "\(lodging.bedrooms)"
         self.bedsLabel.text = "\(lodging.beds)"
