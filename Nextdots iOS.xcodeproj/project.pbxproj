@@ -507,6 +507,7 @@
 				TargetAttributes = {
 					AB00D5DA1DF4A9C600AC274F = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 67P4A8SJ5P;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
@@ -742,10 +743,11 @@
 			baseConfigurationReference = 5D3D1DF0D7BDF1F19A2338AD /* Pods-Nextdots iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 67P4A8SJ5P;
 				INFOPLIST_FILE = "Nextdots iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.josevalderrama.Nextdots-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.MomentumLab.Nextdots-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -756,10 +758,11 @@
 			baseConfigurationReference = 36D5A1A0082FC2D60A728EAC /* Pods-Nextdots iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 67P4A8SJ5P;
 				INFOPLIST_FILE = "Nextdots iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.josevalderrama.Nextdots-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.MomentumLab.Nextdots-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
